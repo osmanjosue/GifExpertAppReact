@@ -9,6 +9,7 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   const onSubmit = (event) => {
+    /* console.log('Hola Mundo desde OnSubmit') */
     event.preventDefault(); //evita el refresh para que se muestre el clg de la sig linea
 
     if (inputValue.trim().length <= 1) return;
@@ -19,7 +20,7 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} aria-label='form'>
       <input
         type="text"
         placeholder="Buscar Gifs"
